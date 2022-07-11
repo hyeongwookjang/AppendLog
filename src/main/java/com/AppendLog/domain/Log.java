@@ -3,16 +3,22 @@ package com.AppendLog.domain;
 import com.AppendLog.service.log.ReadLog2;
 import org.springframework.core.annotation.AliasFor;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-
+import java.util.*;
 
 
 public class Log {
     List<String> urlList = new ArrayList();
     List<String> browserList = new ArrayList();
     List<String> apiList = new ArrayList();
+    Map<String, Integer> urlMap = new TreeMap<>();
+
+    public Map<String, Integer> getUrlMap() {
+        return urlMap;
+    }
+
+    public void setUrlMap(Map<String, Integer> urlMap) {
+        this.urlMap = urlMap;
+    }
 
     public List<String> getUrlList() {
         return urlList;
